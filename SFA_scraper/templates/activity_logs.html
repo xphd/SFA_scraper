@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+{% block content %}
+
+    <style type="text/css">
+      table{
+        width:100%;
+      }
+      th {
+        text-align:center;
+      }
+      td {
+        text-align:center;
+      }
+    </style>
+
+
+    <!--<div class='container'>-->
+      <h2>Check List Logs</h2>
+      <form action="{% url 'clearChecklistLogs' %}" method='post'>
+        {% csrf_token %}
+        <input class="btn btn-default" type="submit" value="clear" />
+      </form>
+      <table border='1'>
+        <tr>
+          <th>Date & Time</th>
+          <th>File Name</th>
+          <th>User</th>
+          <th>Team</th>
+          <th>Status</th>
+            <th>Companies Checked</th>
+        </tr>
+        {% for check_log in check_logs %}
+        <tr>
+          <td>{{check_log.datetime}}</td>
+          <td>{{check_log.file_name}}</td>
+          <td>{{check_log.user_name}}</td>
+          <td>{{check_log.team}}</td>
+          <td>{{check_log.status}}</td>
+            <th>{{check_log.file_length}}</th>
+        </tr>
+        {% endfor %}
+      </table>
+    <!--</div>-->
+
+    <hr />
+
+    <!--<div class='container'>-->
+        <h2>Upload List Logs</h2>
+        {% csrf_token %}
+        <form action="{% url 'clearUploadLogs' %}" method='post'>
+          {% csrf_token %}
+        <input class="btn btn-default" type="submit" value="clear" />
+        </form>
+        <table border='1'>
+            <tr>
+              <th>Date & Time</th>
+              <th>File Name</th>
+              <th>User</th>
+              <th>Team</th>
+              <th>Upload Type</th>
+                <th>File Length</th>
+            </tr>
+            {% for upload_log in upload_logs %}
+            <tr>
+              <td>{{upload_log.datetime}}</td>
+              <td>{{upload_log.file_name}}</td>
+              <td>{{upload_log.user_name}}</td>
+              <td>{{upload_log.team}}</td>
+              <td>{{upload_log.upload_type}}</td>
+                <th>{{upload_log.file_length}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+   <!--</div>-->
+{% endblock %}

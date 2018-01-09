@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% block content %}
+    <style type="text/css">
+        table{ border-collapse:collapse; border:solid 1px Black; }
+        table th{ border:solid 1px black; padding:0.3em 1em;}
+        table td{ border:solid 1px black; padding:0.3em 1em;}
+    </style>
+
+  <h2>Search Result</h2>
+  <table border='1'>
+    <tr>
+      <th>Name</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>URL</th>
+      <th>Owner's Name</th>
+      <th>Owner's Email</th>
+      <th>Industry</th>
+      <th>Time Stamp</th>
+    </tr>
+    {% for com in company %}
+
+    <tr>
+      <td>{{com.name}}</td>
+      <td>{{com.state}}</td>
+      <td>{{com.city}}</td>
+      <td>{{com.zipcode}}</td>
+      <td>{{com.url}}</td>
+      <td>{{com.owner_Name}}</td>
+      <td>{{com.owner_email}}</td>
+      <td>{{com.industry}}</td>
+      <td>{{com.datetime}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+
+
+
+
+
+
+
+{% endblock %}

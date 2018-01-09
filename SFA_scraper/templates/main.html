@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SFA Directory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+</head>
+<body>
+    <nav class='navbar navbar-default navbar-static-top'>
+        <div class='container-fluid'>
+            <h2>SFA Directory </h2>
+        </div>
+        <div class="container-fluid">
+            <ul class='nav navbar-nav'>
+                <li><a href="/addcompany">Add Company</a></li>
+                <li><a href="/check_list">Check List</a></li>
+                <li><a href="/upload">Upload List</a></li>
+                <li><a href="/activity_logs">Activity Logs</a></li>
+                <li><a href="/user_management">Manage Users</a></li>
+            </ul>
+            <form class='navbar-form navbar-left' action="{% url 'search_company' %}" method = "POST" enctype = "multipart/form-data">
+                {% csrf_token %}
+                <div class='form-group' >
+                    <input class="form-control" type="text" name="search" placeholder="Search Bar" required = True>
+                </div>
+                <input class="btn btn-default" type="submit" value="Go" />
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <div style='position:absolute; top:15%; right:1.2%;'>
+                    <strong>{{ user.username }}</strong>
+                    <br />
+                    <strong>{{ user.profile.access_level }}</strong>
+                </div>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scraping companies<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/bingScraper">Bing Scraper</a></li>
+                        <li><a href="/googleScraper">Google Scraper</a></li>
+                        <li><a href="/findCompany">Search company name</a></li>
+                        <li><a href="/aggregate">Aggregate Lists</a></li>
+                    </ul>
+                </li>
+                <!--<li><a href="{% url 'index' %}">Scraping companys</a></li>-->
+                <li><a href="{% url 'logout' %}">Log out</a></li>
+                {% else %}
+                <li><a href="/signin/">Sign in</a></li>
+                <li><a href="/signup/">Sign up</a></li>
+                {% endif %}
+            </ul>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class='container'>
+        {% block content %}
+
+        {%endblock%}
+
+        {%if message%}
+        {{message}}
+        {% endif %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+    <style type="text/css">
+        table{ border-collapse:collapse; border:solid 1px Black; }
+        table th{ border:solid 1px black; padding:0.3em 1em;}
+        table td{ border:solid 1px black; padding:0.3em 1em;}
+    </style>
+
+  <h2>User Information</h2>
+  <table border='1'>
+    <tr>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Team</th>
+      <th>Access Level</th>
+    </tr>
+    <tr>
+      <td>{{user.username}}</td>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.profile.team}}</td>
+      <td>{{user.profile.access_level}}</td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div class="container">
+    <form action='{% url 'change_user_info' user_id=user.id %}' method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    <label for='change_info'>Change the access level</label>
+    <select name = access_level size = 1>
+        <option value = 'Management'>Management</option>
+        <option value = 'Searcher'>Searcher</option>
+        <option value = 'Analyst'>Analyst</option>
+    </select> <input type="submit" value="Confirm" /> </form>
+</div>
+{% endblock %}'

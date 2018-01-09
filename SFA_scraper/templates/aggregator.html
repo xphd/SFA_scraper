@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class='container'>
+	<div class="form-group">
+    <form action="{% url 'aggregate'%}" method='POST' enctype = "multipart/form-data">
+		{% csrf_token %}
+		<div class="form-inline">
+      <div class="form-group">
+        <label>Enter Keywords(split keywords by comma)</label>
+          <input type="text" name="description" required='true' size="60"/><br />
+	<label>Upload lists that contain column header 'Company Name' and 'URLtrim'</label>
+          <input type="file" name='my_file[]' multiple class="form-control-file dropzone" style="width: 360%; border: dashed 1px black;">
+      </div>
+    </div>
+  	 <div>
+  	   <button type="submit" class="btn btn-primary">Submit</button>
+  	 </div>
+    </form>
+	</div>
+</div>
+{%endblock%}

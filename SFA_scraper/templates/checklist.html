@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class='container'>    
+	<div class="form-group">
+    <form action="{% url 'check_list'%}" method='POST' enctype = "multipart/form-data">
+		{% csrf_token %}
+		<div class="form-inline">
+      <div class="form-group">
+        <label><h4>Cross Reference List Against Directory</h4>
+	<p>upload a list of trimmed url with column header "URLtrim"</p>
+          <input type="file" name='check_list' class="form-control-file dropzone" style="width: 360%; border: dashed 1px black;">
+        </label>
+      </div>
+    </div>
+  	 <div>
+  	   <button type="submit" class="btn btn-primary">Submit</button>
+  	 </div>
+    </form>
+	</div>
+</div>
+
+<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+{% endblock %}

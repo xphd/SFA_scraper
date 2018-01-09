@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class='container'>
+	<h1>Bulk Upload Company List</h1>
+    <div class='row'>
+    	<div class="form-group col-sm-6">
+        <form id='form1' action="{% url 'upload' %}" method = 'POST' enctype = "multipart/form-data">
+        {% csrf_token %}
+          <label>Override Existing Entries
+    	     <input name='override' type="file" class="form-control-file dropzone" style="width: 180%; border: dashed 1px black;">
+          </label>
+    	    <div>
+    	    	<button type="submit" class="btn btn-primary">Submit</button>
+    	    </div>
+        </form>
+    	</div>
+    	<div class="form-group col-sm-6">
+        <form id='form2' action="{% url 'upload' %}" method = 'POST' enctype = "multipart/form-data">
+  				{% csrf_token %}
+          <label>Passive Entry
+  		      <input name = 'passive' type="file" class="form-control-file dropzone" style="width: 180%; border: dashed 1px black;">
+  		    </label>
+  		   	<div>
+  		   	  <button type="submit" class="btn btn-primary">Submit</button>
+  		    </div>
+        </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

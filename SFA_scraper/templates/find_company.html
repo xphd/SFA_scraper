@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class='container'>
+  <form action="{% url 'findCompany' %}" method='POST'  class="navbar-form navbar-left" role="search">
+     {% csrf_token %} 
+  <div class="form-group">
+    <input name='single_url' type="text" class="form-control" placeholder="URL Or Company Name">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+
+
+
+<div class='container'>
+  <form action="{% url 'findCompany'%}" method='POST' enctype = "multipart/form-data" class='navbar-form'>
+ 		{% csrf_token %} 
+		<div class="form-inline">
+      <div class="form-group">
+        <label>Upload a small list with column header "URLtrim"
+          <input type="file" name='list_urls' class="form-control-file dropzone" style="width:360%; border: dashed 1px black;">
+        </label>
+      </div>
+    </div>
+  	 <div>
+  	   <button type="submit" class="btn btn-primary">Submit</button>
+  	 </div>
+    </form>  
+</div>
+
+{% endblock %}

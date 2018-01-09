@@ -1,0 +1,39 @@
+scraper      team           keyword          time                        number          
+bingScraper  Arden Bay  pharmaceutical staffing, biotech staffing, CRO staffing, clinical staffing, pharmaceutical recruit, biotech recruit, CRO recruit, clinical recruit  2017-09-26 20:44:45.330662  page: 12
+bingScraper  Arden Bay  apartment turnover, nit turnover  2017-09-27 14:36:02.726138  page: 15
+bingScraper  Arden Bay  apartment turnover, unit turnover  2017-09-27 15:37:07.904615  page: 15
+bingScraper  Arden Bay  apartment turnover, unit turnover  2017-09-27 16:55:11.701816  page: 15
+bingScraper  Arden Bay  apartment turnover,unit turnover  2017-09-27 18:04:44.346271  page: 15
+bingScraper  Arden Bay  descaling services,chemical cleaning services  2017-09-27 19:19:29.899578  page: 15
+bingScraper  Arden Bay  coffee equipment service company, office coffee  2017-09-27 19:31:01.575855  page: 15
+bingScraper  Arden Bay  descaling services,chemical cleaning services  2017-09-27 19:40:52.615974  page: 5
+bingScraper  Arden Bay  coffee equipment service company,office coffee  2017-09-27 19:53:21.604166  page: 5
+bingScraper  Arden Bay  "systems integrator","security systems integrator"  2017-09-27 20:27:57.842497  page: 5
+bingScraper  Arden Bay  "systems integrator","security systems integrator"  2017-09-27 20:40:49.655889  page: 15
+bingScraper  Arden Bay  IT asset management,IT asset disposition  2017-10-02 20:32:07.298014  page: 8
+bingScraper  Arden Bay  IT asset management,IT asset disposition  2017-10-02 20:36:55.236541  page: 4
+bingScraper  Arden Bay  IT asset management,IT asset disposition  2017-10-03 14:22:25.132436  page: 4
+bingScraper  Estes Point  "HALT & HASS testing services company", highly accelerated life test companies, Highly accelerated stress screening companies  2017-10-04 21:41:35.471396  page: 10
+bingScraper  Estes Point  "HALT & HASS testing services company", highly accelerated life test companies, Highly accelerated stress screening companies  2017-10-04 21:43:00.814977  page: 6
+bingScraper  Arden Bay  asset tracking,asset reporting  2017-10-05 14:42:29.253169  page: 8
+bingScraper  Arden Bay  pharmaceutical contract management,contract analysis services  2017-10-05 15:11:44.785409  page: 8
+bingScraper  Arden Bay  pharmaceutical contract management,contract analysis services  2017-10-05 15:13:39.747952  page: 8
+bingScraper  Estes Point  HALT & HASS testing services company, highly accelerated life test companies, Highly accelerated stress screening companies  2017-10-05 15:29:15.776891  page: 10
+bingScraper  Estes Point  HALT & HASS testing services company, highly accelerated life test companies, Highly accelerated stress screening companies  2017-10-05 15:30:38.637031  page: 6
+bingScraper  Estes Point  HALT & HASS testing services company, highly accelerated life test companies, Highly accelerated stress screening companies  2017-10-05 16:52:29.050428  page: 6
+bingScraper  Arden Bay  "standby rescue services"  2017-10-10 17:41:13.962195  page: 8
+bingScraper  Arden Bay   "standby rescue services"  2017-10-10 18:28:43.267570  page: 8
+bingScraper  Estes Point  Fitness equipment repair, gym maintenance, exercise equipment repair, fitness equipment upholstery repair  2017-10-25 14:13:47.556107  page: 10
+bingScraper  Estes Point  Fitness equipment repair, gym maintenance, exercise equipment repair, fitness equipment upholstery repair  2017-10-25 14:15:47.985625  page: 5
+bingScraper  Oakbourne  Industrial Commercial "Equipment Inspection" Services  2017-10-26 21:55:22.333331  page: 10
+bingScraper  Oakbourne  Industrial Commercial "Equipment Inspection" Services  2017-10-26 21:58:07.579508  page: 50
+bingScraper  Estes Point  product compliance services  2017-11-06 21:15:32.160993  page: 1
+bingScraper  Crescent Peak  Managed IT, IT MSP, IT Services, IT Solutions, IT Network Monitoring, IT Support, IT Managed Services  2017-11-07 20:48:38.784882  page: 15
+bingScraper  Crescent Peak  IT Managed Services  2017-11-08 20:08:59.436379  page: 10
+bingScraper  Crescent Peak  IT MSP  2017-11-08 20:25:41.494488  page: 10
+bingScraper  Crescent Peak  IT Network Monitoring  2017-11-08 20:40:34.878155  page: 10
+bingScraper  Crescent Peak  Commercial Generator Maintenance  2017-11-08 23:03:57.890238  page: 10
+bingScraper  Oakbourne  industrial furnace maintenance  2017-11-30 15:09:01.120595  page: 10
+bingScraper  Oakbourne  clinical decision support solutions  2017-12-06 16:16:40.553461  page: 10
+bingScraper  Bradford Lane  Geriatric care management  2017-12-11 15:20:02.966535  page: 10
+bingScraper  Bradford Lane  Geriatric care management  2017-12-11 15:21:34.934509  page: 9
